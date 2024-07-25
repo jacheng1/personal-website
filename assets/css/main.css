@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import url("fontawesome-all.min.css");
 
-/*
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html,
 body,
 div,
@@ -1779,17 +1773,6 @@ input[type="submit"],
 input[type="reset"],
 button,
 .button {
-  background-image:
-    url("images/bg.png"),
-    -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  background-image:
-    url("images/bg.png"),
-    -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  background-image:
-    url("images/bg.png"),
-    -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-  background-image: url("images/bg.png"),
-    linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
   -moz-transition: background-color 0.2s ease-in-out;
   -webkit-transition: background-color 0.2s ease-in-out;
   -ms-transition: background-color 0.2s ease-in-out;
@@ -1809,10 +1792,11 @@ button,
   box-shadow:
     inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5),
     inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-  background-color: #43b3e0;
+  background-color: #2196f3;
   padding: 1em 2.35em 1em 2.35em;
   font-size: 1.1em;
   max-width: 24em;
+  margin-bottom: -100px;
 }
 
 input[type="button"]:hover,
@@ -1820,7 +1804,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 button:hover,
 .button:hover {
-  background-color: #43bff0;
+  background-color: #63b4f6;
   color: #fff !important;
 }
 
@@ -1829,7 +1813,7 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 button:active,
 .button:active {
-  background-color: #3ba8d3;
+  background-color: #63b4f6;
   top: 1px;
 }
 
@@ -2139,8 +2123,7 @@ ul.actions li:first-child {
 }
 
 .wrapper.style2 {
-  background-color: #fafafa;
-  text-shadow: 1px 1px 0px #fff;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(6,78,230,1) 140%);
 }
 
 .wrapper.style3 {
@@ -2152,6 +2135,15 @@ ul.actions li:first-child {
   background-color: #303030;
   color: #999;
   text-shadow: -1px -1px 0px #181818;
+}
+
+.wrapper.style2 h1,
+.wrapper.style2 h2,
+.wrapper.style2 h3,
+.wrapper.style2 h4,
+.wrapper.style2 h5,
+.wrapper.style2 h6 {
+  color: #fff;
 }
 
 .wrapper.style4 h1,
@@ -2181,7 +2173,7 @@ ul.actions li:first-child {
 /* Nav */
 
 #nav {
-  background-color: #282828;
+  background-color: #000000;
   text-align: center;
   position: fixed;
   left: 0;
