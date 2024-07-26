@@ -195,7 +195,7 @@ select {
 }
 
 .wrapper.style2 a {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 a {
@@ -2126,7 +2126,12 @@ ul.actions li:first-child {
 }
 
 .wrapper.style2 {
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgb(0, 26, 255) 140%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgb(0, 26, 255) 140%
+  );
 }
 
 .wrapper.style3 {
@@ -2624,7 +2629,7 @@ body > article {
   opacity: 0.6;
 }
 
-.carousel-control.left, 
+.carousel-control.left,
 .carousel-control.right {
   background-image: none !important;
 }
@@ -2637,6 +2642,6 @@ body > article {
 
 .glyphicon-chevron-left:hover,
 .glyphicon-chevron-right:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
 }
