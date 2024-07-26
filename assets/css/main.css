@@ -2122,7 +2122,7 @@ ul.actions li:first-child {
 }
 
 .wrapper.style2 {
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(6,78,230,1) 140%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgb(0, 26, 255) 110%);
 }
 
 .wrapper.style3 {
@@ -2584,4 +2584,13 @@ body > article {
   #copyright li:first-child {
     margin-top: 0;
   }
+}
+
+/* Carousel */
+
+.item-block {
+  width: 100%;
+  height: 550px;
+  background-color: white;
+  opacity: 0.1;
 }
