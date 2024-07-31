@@ -1,33 +1,31 @@
 <?php
+require 'vendor/autoload.php';
+
+use SendGrid\Mail\Mail;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // retrieve form fields
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $subject = htmlspecialchars($_POST['subject']);
-    $message = htmlspecialchars($_POST['message']);
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-    // set recipient address
-    $to = "chjack568@gmail.com";
+    $email = new Mail();
+    $email->setFrom("your-email@example.com", "Your Name");
+    $email->setSubject($subject);
+    $email->addTo("chjack568@gmail.com", "Recipient Name");
+    $email->addContent("text/plain", "Name: $name\nEmail: $email\n\n$message");
 
-    // set email subject
-    $email_subject = "new message from: $name - $subject";
+    $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 
-    // set email body
-    $email_body = "Name: $name\n";
-    $email_body .= "Email: $email\n";
-    $email_body .= "Subject: $subject\n\n";
-    $email_body .= "Message:\n$message\n";
-
-    // email headers
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // send composed email
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        echo "Message sent successfully!";
+    try {
+        $response = $sendgrid->send($email);
+        
+        echo 'Email sent successfully.';
+    } catch (Exception $e) {
+        echo 'Caught exception: '. $e->getMessage() ."\n";
     }
-    else {
-        echo "Failed to send message.";
-    }
+}
+else {
+    echo 'Invalid request method.';
 }
 ?>
